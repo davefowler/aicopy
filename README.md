@@ -2,6 +2,8 @@
 
 `aicopy` is a simple command-line tool for macOS that copies the contents of a directory or a file, along with their filenames, to the clipboard. This is especially useful for sharing code snippets or directories of code files in a structured format.
 
+It's just a small wrapper around `pbcopy` that also includes filename information.
+
 ## Features
 
 - Copy the contents of a directory to the clipboard, including filenames.
