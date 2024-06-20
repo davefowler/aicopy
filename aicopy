@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: aicopy <directory|file|pattern>"
+  exit 1
+fi
+
+TARGET="$1"
+
+copy_content() {
+  local file="$1"
+  echo "=== FILENAME_START ==="
+  echo "$file"
+  echo "=== FILENAME_END ==="
+  echo "=== CONTENT_START ==="
+  cat "$file"
+  echo ""
+  echo "=== CONTENT_END ==="
+}
+
+if [ -d "$TARGET" ]; then
+  # If it's a directory, process all files in the directory
+  for file in "$TARGET"/*; do
+    if [ -f "$file" ]; then
+      copy_content "$file"
+    fi
+  done | pbcopy
+elif [ -f "$TARGET" ]; then
+  # If it's a single file, process the file
+  copy_content "$TARGET" | pbcopy
+else
+  # Handle patterns (e.g., somedir/*.txt)
+  for file in $TARGET; do
+    if [ -f "$file" ]; then
+      copy_content "$file"
+    fi
+  done | pbcopy
+fi
