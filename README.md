@@ -41,8 +41,8 @@ This will download the `aicopy` script and place it in `/usr/local/bin`.
 
 ```sh
 aicopy <directory|file|pattern>
-
+```
 
 ## Acknowledgement to AI
 
-Most of this code and the readme was written by Chat-GPT 4o.  Here's the full chat.](https://chatgpt.com/share/f21acadf-0d21-4ac6-ac10-ab18bcf00fb4)
+Most of this code and the readme was written by Chat-GPT 4o.  [Here's the full chat.](https://chatgpt.com/share/f21acadf-0d21-4ac6-ac10-ab18bcf00fb4)
