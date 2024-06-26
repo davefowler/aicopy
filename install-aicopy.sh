@@ -7,7 +7,7 @@ if [ ! -d "/usr/local/bin" ]; then
 fi
 
 # Download the aicopy script
-curl -o /usr/local/bin/aicopy https://raw.githubusercontent.com/godavemon/aicopy/main/aicopy
+curl -o /usr/local/bin/aicopy https://raw.githubusercontent.com/davefowler/aicopy/main/aicopy
 
 # Make the script executable
 chmod +x /usr/local/bin/aicopy
